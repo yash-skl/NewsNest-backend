@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from "cookie-parser";
+import { JSON_LIMIT } from './constants.js';
 
 const app = express();
 
