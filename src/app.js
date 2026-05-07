@@ -10,4 +10,9 @@ app.use(express.urlencoded({extended: true, limit:JSON_LIMIT}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
+import scrapeRoutes from "./routes/scrapper.routes.js";
+
+
+app.use("/api/scrape", scrapeRoutes);
+
 export { app }
