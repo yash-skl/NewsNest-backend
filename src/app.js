@@ -12,9 +12,11 @@ app.use(cookieParser())
 
 import scrapeRoutes from "./routes/scrapper.routes.js";
 import authRoutes from "./routes/auth.routes.js"
+import storyRoutes from "./routes/story.routes.js"
 
 
 app.use("/api/v1/scrape", scrapeRoutes);
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/stories", storyRoutes);
 
 export { app }
