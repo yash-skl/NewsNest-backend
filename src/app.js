@@ -11,8 +11,10 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 import scrapeRoutes from "./routes/scrapper.routes.js";
+import authRoutes from "./routes/auth.routes.js"
 
 
-app.use("/api/scrape", scrapeRoutes);
+app.use("/api/v1/scrape", scrapeRoutes);
+app.use("/api/v1/auth", authRoutes);
 
 export { app }

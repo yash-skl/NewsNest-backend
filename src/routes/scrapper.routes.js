@@ -1,7 +1,7 @@
-import express from "express";
+import { Router } from "express";
 import { scrapeNews } from "../controllers/scrapper.controllers.js";
 
-const router = express.Router();
+const router = Router();
 
 router.post("/", scrapeNews);
 
