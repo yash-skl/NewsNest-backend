@@ -8,7 +8,7 @@ const app = express();
 app.use(cors({
     origin: [
       "http://localhost:5173",
-      "https://news-nest-frontend-znv1-a9eibvy9s-yashs-projects-2cc9ab23.vercel.app"
+      "https://news-nest-frontend.vercel.app"
     ],
     credentials: true
   }));
