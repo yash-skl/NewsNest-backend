@@ -8,12 +8,12 @@ const app = express();
 app.use(cors({
     origin: [
       "http://localhost:5173",
-      "https://news-nest-frontend.vercel.app/"
+      "https://news-nest-frontend.vercel.app"
     ],
     credentials: true
   }));
 
-app.use(express.json({limit: JSON_LIMIT})) // this specifies the maximum size of incoming json payload
+app.use(express.json({limit: JSON_LIMIT})) 
 app.use(express.urlencoded({extended: true, limit:JSON_LIMIT}))
 app.use(express.static("public"))
 app.use(cookieParser())
