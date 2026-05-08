@@ -5,6 +5,11 @@ import { JSON_LIMIT } from './constants.js';
 
 const app = express();
 
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true
+}));
+
 app.use(express.json({limit: JSON_LIMIT})) // this specifies the maximum size of incoming json payload
 app.use(express.urlencoded({extended: true, limit:JSON_LIMIT}))
 app.use(express.static("public"))
